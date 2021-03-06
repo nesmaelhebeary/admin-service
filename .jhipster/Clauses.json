@@ -1,0 +1,37 @@
+{
+  "name": "Clauses",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textAr",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productClauses",
+      "otherEntityRelationshipName": "clauseId",
+      "relationshipName": "id"
+    }
+  ],
+  "changelogDate": "20210306152501",
+  "entityTableName": "clauses",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

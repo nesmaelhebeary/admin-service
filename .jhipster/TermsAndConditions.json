@@ -1,0 +1,37 @@
+{
+  "name": "TermsAndConditions",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textAr",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productTAndC",
+      "otherEntityRelationshipName": "tAndCId",
+      "relationshipName": "id"
+    }
+  ],
+  "changelogDate": "20210306152401",
+  "entityTableName": "terms_and_conditions",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

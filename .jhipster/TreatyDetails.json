@@ -1,0 +1,58 @@
+{
+  "name": "TreatyDetails",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "treatyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maximumLimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "minLimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "retained",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "quotaShared",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "surplus",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "autoFac",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "treaty",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "treatyId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210306151501",
+  "entityTableName": "treaty_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

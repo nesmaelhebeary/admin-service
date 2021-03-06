@@ -1,0 +1,52 @@
+{
+  "name": "Products",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lineTypeId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productsAttr",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productClauses",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productTAndC",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lineType",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "lineTypeId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210306151201",
+  "entityTableName": "products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

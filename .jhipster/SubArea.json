@@ -1,0 +1,26 @@
+{
+  "name": "SubArea",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "crestaId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210306152101",
+  "entityTableName": "sub_area",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

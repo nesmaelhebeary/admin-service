@@ -1,0 +1,43 @@
+{
+  "name": "RIBrokers",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registerationNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commissionPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "Active,InActive"
+    },
+    {
+      "fieldName": "contactDial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactEmail",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210306152301",
+  "entityTableName": "ri_brokers",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

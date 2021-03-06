@@ -1,0 +1,29 @@
+{
+  "name": "LineType",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "lineTypeId",
+      "relationshipName": "id"
+    }
+  ],
+  "changelogDate": "20210306151101",
+  "entityTableName": "line_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

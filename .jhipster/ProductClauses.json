@@ -1,0 +1,41 @@
+{
+  "name": "ProductClauses",
+  "fields": [
+    {
+      "fieldName": "clauseId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "productId",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "clauses",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "clauseId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210306152701",
+  "entityTableName": "product_clauses",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}
