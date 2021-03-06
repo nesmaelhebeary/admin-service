@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity ProductTAndC.
+    -->
+    <changeSet id="20210306152601-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="product_id_id"
+                                 baseTableName="product_t_and_c"
+                                 constraintName="fk_product_t_and_c_product_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="products"/>
+
+        <addForeignKeyConstraint baseColumnNames="t_andcid_id"
+                                 baseTableName="product_t_and_c"
+                                 constraintName="fk_product_t_and_c_t_andcid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="terms_and_conditions"/>
+
+    </changeSet>
+</databaseChangeLog>

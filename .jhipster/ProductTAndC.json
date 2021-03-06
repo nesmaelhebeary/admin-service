@@ -1,0 +1,41 @@
+{
+  "name": "ProductTAndC",
+  "fields": [
+    {
+      "fieldName": "tAndCId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "productId",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "termsAndConditions",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "tAndCId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210306152601",
+  "entityTableName": "product_t_and_c",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}

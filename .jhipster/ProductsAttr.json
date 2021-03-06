@@ -1,0 +1,39 @@
+{
+  "name": "ProductsAttr",
+  "fields": [
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "attributeValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "atributeName",
+      "fieldType": "AttributeName",
+      "fieldValues": "TAX,RATE"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "productId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210306151301",
+  "entityTableName": "products_attr",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "adminservice",
+  "applications": "*",
+  "microserviceName": "adminservice"
+}
