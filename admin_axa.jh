@@ -1,0 +1,274 @@
+entity LineType {
+	name String,
+    id Long
+}
+entity Products {
+    id Long,
+    LineTypeId Long,
+    name String,
+    describtion String,
+    status Status,
+    isAllowMultipleSections Boolean
+  }
+entity ProductsSection {
+	id Long,
+    productId Long,
+    name String,
+    description String,
+    status Status,
+    defaultSumUp DefaultSumUp
+} 
+entity ProductsSectionIncludeList {
+	id Long,
+    sectionId Long,
+    otherSectionId Long
+
+}
+entity Deductibles {
+	id Long,
+    sectionId Long,
+    textAr String,
+    textEn String
+  } 
+entity ProductsAttr {
+    id Long,
+    productId Long,
+    attributeValue String,
+    atributeName String,
+    dataType DataType,
+    isMandatoryForQuotation Boolean,
+    isMandatoryForPolicy Boolean,
+    attrType AttrType,
+    lookupTypeId Long
+}
+entity ProductClause {
+	id Long,
+    productId Long, 
+    clauseId Long
+}
+entity LkClausesParameters{
+	id Long,
+	name String
+}
+
+
+entity Treaty {
+	name String,
+    id Long,
+    startDate LocalDate,
+    endDate LocalDate
+   }
+entity TreatyDetails {
+	id Long,
+    name String, 
+    treatyId Long,
+    maximumLimit Double,
+    productId Long,
+    minLimit Double,
+    retained Double,
+    quotaShared Double,
+    surplus Double,
+    classificationType ClassificationType,
+    naceCodeClassification String,
+    otherClassification String,
+    anyoneRisk Boolean,
+    anyoneAccumulatedRisk Boolean
+  }
+entity Cresta {
+      name String,
+      id Long,
+      shortName String,
+      code String
+  }
+entity EvaluationBasis {
+      nameAr String,
+      id Long,
+      naemEn String
+  }
+entity NaceCode {
+      id Long,
+      activity String,
+      code String,
+      globalClass String,
+      autoFacCapacity Integer,
+      localClass String,
+      boRate Float,
+      pdRate Float,
+  }
+entity FireLineSettings{
+  id Long,
+  className String,
+  fromValue Long,
+  toValue Long,
+  currency String,
+  coveragePercentage Long
+  }
+entity Occupancy {
+	  id Long,
+      name String,
+      shortName String,
+      description String,
+      lineTypeId String,
+      lineTypeOccupancy String
+  }
+entity Structure {
+	id Long
+    name String,
+    shortName String,
+    description String,
+    canBuildingClassId String
+  }
+  entity Roof {
+	id Long,
+    name String,
+    description String
+  }
+  entity Vessel {
+  	id Long,
+    nameEn String,
+    nameAr String
+  }
+  entity SubArea {
+	id Long,
+    name String,
+    code String
+    crestaId Long
+  }
+  entity CoverType {
+  	id Long,
+    name String
+  }
+  entity PolicyType {
+  	id Long,
+    name String
+  }
+  entity SystemClauses {
+  	id Long,
+    code String,
+    textEn String,
+    textAr String,
+    affectMpl String,
+    clauseType ClauseType,
+    status Status
+  }
+  entity Countries {
+  	id Long,
+    nameEnglish String,
+    nameArabic String,
+  }
+  
+  entity Commodity {
+  	id Long,
+    nameEnglish String,
+    nameArabic String,
+  }
+  
+  entity Port {
+  	id Long,
+    countryId Long,
+    nameEnglish String,
+    nameArabic String,
+  }
+  
+  entity Packing {
+  	id Long,
+    nameEnglish String,
+    nameArabic String,
+  }
+  entity LookupTypes{
+    id Long,
+    name LookupType,
+    childName LookupType
+  }
+relationship OneToMany {
+  Treaty {id} to TreatyDetails{treatyId}
+}
+
+
+
+
+relationship OneToMany {
+  ProductsSection {id} to ProductsSectionIncludeList{sectionId}
+}
+
+relationship OneToMany {
+  ProductsSection {id} to ProductsSectionIncludeList{otherSectionId}
+}
+relationship OneToMany {
+  LineType {id} to Products{LineTypeId}
+}
+
+relationship OneToMany {
+  LookupTypes {id} to ProductsAttr{LookupTypeId}
+}
+
+relationship OneToMany {
+  Products {id} to ProductsAttr{productId}
+}
+
+relationship OneToMany {
+  Products {id} to ProductClause{productId}
+}
+
+relationship OneToMany {
+  SystemClauses {id} to ProductClause{clauseId}
+}
+relationship OneToMany {
+  Products{id} to ProductsSection{productId}
+}
+
+relationship OneToMany {
+  ProductsSection{id} to Deductibles{sectionId}
+}
+
+relationship OneToMany {
+  Countries {id} to Port{countryId}
+}
+relationship OneToMany {
+  Cresta {id} to SubArea{crestaId}
+}
+
+
+enum ClassificationType{
+None, NaceCode, Other
+}
+
+  enum AttrType{
+  Informative, BreakDown
+  }
+
+
+enum AttributeName{
+TAX, RATE
+}
+
+enum TreatyCategory{
+CLASSA, CLASSB
+}
+enum DefaultSumUp{
+Included, Exceluded
+}
+enum Status{
+Active, InActive
+}
+
+enum ProductType{
+	Individual, Corporate
+}
+
+enum ClauseType {
+	Extension, TermsAndCondition, Clause, Execlusion
+}
+
+enum LookupType {
+	NaceCode, Cresta, Commodity, Packing, Port, Vessel, EvaluationBasis
+}
+
+enum DataType {
+	STRING, NUMBER, FLAG, DATE, LOOKUP
+}
+
+
+
+
+
