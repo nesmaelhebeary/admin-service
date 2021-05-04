@@ -1,0 +1,43 @@
+{
+  "name": "FireLineSettings",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "className",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fromValue",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "toValue",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coveragePercentage",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "fire_line_settings",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105616"
+}

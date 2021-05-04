@@ -1,0 +1,11 @@
+id;treaty_type;start_date;end_date;treaty_document_path
+1;AutoFac;2021-05-04;2021-05-03;Cheese
+2;Normal;2021-05-03;2021-05-04;solid black
+3;Multinational;2021-05-03;2021-05-04;hardware invoice
+4;Multinational;2021-05-03;2021-05-04;Salad auxiliary
+5;Normal;2021-05-04;2021-05-04;Soft Tennessee Market
+6;Multinational;2021-05-03;2021-05-04;Grocery
+7;AutoFac;2021-05-03;2021-05-03;Toys
+8;AutoFac;2021-05-03;2021-05-03;Hawaii Books
+9;AutoFac;2021-05-04;2021-05-04;Borders Bacon
+10;AutoFac;2021-05-03;2021-05-03;input

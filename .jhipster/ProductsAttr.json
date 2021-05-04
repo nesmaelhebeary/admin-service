@@ -1,0 +1,70 @@
+{
+  "name": "ProductsAttr",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "attributeValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "atributeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataType",
+      "fieldType": "DataType",
+      "fieldValues": "STRING,NUMBER,FLAG,DATE,LOOKUP"
+    },
+    {
+      "fieldName": "isMandatoryForQuotation",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isMandatoryForPolicy",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "attrType",
+      "fieldType": "AttrType",
+      "fieldValues": "Informative,BreakDown"
+    },
+    {
+      "fieldName": "lookupTypeId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lookupTypes",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "lookupTypeId"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "productId"
+    }
+  ],
+  "entityTableName": "products_attr",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105603"
+}

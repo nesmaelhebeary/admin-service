@@ -1,0 +1,38 @@
+{
+  "name": "ProductsSectionIncludeList",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sectionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "otherSectionId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "productsSection",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "sectionId"
+    }
+  ],
+  "entityTableName": "products_section_include_list",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105602"
+}

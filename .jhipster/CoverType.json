@@ -1,0 +1,27 @@
+{
+  "name": "CoverType",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "cover_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105622"
+}

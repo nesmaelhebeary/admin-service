@@ -1,0 +1,31 @@
+{
+  "name": "Vessel",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameAr",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "vessel",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105620"
+}

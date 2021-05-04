@@ -1,0 +1,38 @@
+{
+  "name": "Countries",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nameEnglish",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameArabic",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "port",
+      "otherEntityRelationshipName": "countryId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "countries",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105627"
+}

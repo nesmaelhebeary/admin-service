@@ -1,0 +1,11 @@
+id;name;child_name
+1;EvaluationBasis;Packing
+2;Port;Vessel
+3;Cresta;Cresta
+4;EvaluationBasis;Cresta
+5;Commodity;Port
+6;Packing;Commodity
+7;Cresta;Commodity
+8;Commodity;NaceCode
+9;EvaluationBasis;NaceCode
+10;NaceCode;Cresta

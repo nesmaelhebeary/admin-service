@@ -1,0 +1,51 @@
+{
+  "name": "NaceCode",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "activity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "globalClass",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoFacCapacity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "localClass",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "boRate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pdRate",
+      "fieldType": "Float"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nace_code",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105615"
+}

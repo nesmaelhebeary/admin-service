@@ -1,0 +1,44 @@
+{
+  "name": "ProductExtensions",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "extensionId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "productId"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "extensions",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "extensionId"
+    }
+  ],
+  "entityTableName": "product_extensions",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105607"
+}

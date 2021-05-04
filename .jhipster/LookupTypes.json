@@ -1,0 +1,40 @@
+{
+  "name": "LookupTypes",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "LookupType",
+      "fieldValues": "NaceCode,Cresta,Commodity,Packing,Port,Vessel,EvaluationBasis"
+    },
+    {
+      "fieldName": "childName",
+      "fieldType": "LookupType",
+      "fieldValues": "NaceCode,Cresta,Commodity,Packing,Port,Vessel,EvaluationBasis"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productsAttr",
+      "otherEntityRelationshipName": "lookupTypeId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "lookup_types",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105631"
+}
