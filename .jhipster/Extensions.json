@@ -1,0 +1,61 @@
+{
+  "name": "Extensions",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textAr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "affectMpl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "Active,InActive"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "extensionParameters",
+      "otherEntityRelationshipName": "extensionId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productExtensions",
+      "otherEntityRelationshipName": "extensionId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "extensions",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105626"
+}

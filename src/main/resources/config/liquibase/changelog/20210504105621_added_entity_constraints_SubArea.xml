@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity SubArea.
+    -->
+    <changeSet id="20210504105621-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="cresta_id_id"
+                                 baseTableName="sub_area"
+                                 constraintName="fk_sub_area__cresta_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cresta"/>
+    </changeSet>
+</databaseChangeLog>

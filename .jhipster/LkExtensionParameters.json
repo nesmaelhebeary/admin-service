@@ -1,0 +1,39 @@
+{
+  "name": "LkExtensionParameters",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataType",
+      "fieldType": "DataType",
+      "fieldValues": "STRING,NUMBER,FLAG,DATE,LOOKUP"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "extensionParameters",
+      "otherEntityRelationshipName": "parameterId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "lk_extension_parameters",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105610"
+}

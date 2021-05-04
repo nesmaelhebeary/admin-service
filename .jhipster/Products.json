@@ -1,0 +1,85 @@
+{
+  "name": "Products",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lineTypeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameAr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "Active,InActive"
+    },
+    {
+      "fieldName": "isAllowMultipleSections",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productsAttr",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productsCommissionSchema",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productClause",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productExtensions",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productsSection",
+      "otherEntityRelationshipName": "productId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lineType",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "lineTypeId"
+    }
+  ],
+  "entityTableName": "products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105600"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "TreatyDetails",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "treatyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maximumLimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "minLimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "retainedAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "cededAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "retainedPercenatge",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "cededPercenatge",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "surplus",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "classificationType",
+      "fieldType": "ClassificationType",
+      "fieldValues": "None,NaceCode,Other"
+    },
+    {
+      "fieldName": "naceCodeClassification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "otherClassification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "riskType",
+      "fieldType": "RiskType",
+      "fieldValues": "AnyoneRisk,AnyoneAccumulatedRisk"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "treaty",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "treatyId"
+    }
+  ],
+  "entityTableName": "treaty_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105612"
+}

@@ -1,0 +1,11 @@
+id;name;data_type
+1;quantify New;STRING
+2;portal;DATE
+3;hard;LOOKUP
+4;Checking Granite composite;FLAG
+5;Wells Soft;LOOKUP
+6;online;STRING
+7;Robust;LOOKUP
+8;Administrator Card;DATE
+9;Secured Account;FLAG
+10;Mouse calculating Personal;STRING

@@ -1,0 +1,64 @@
+{
+  "name": "ProductsSection",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameAr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "Active,InActive"
+    },
+    {
+      "fieldName": "defaultSumUp",
+      "fieldType": "DefaultSumUp",
+      "fieldValues": "Included,Exceluded"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productsSectionIncludeList",
+      "otherEntityRelationshipName": "sectionId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "deductibles",
+      "otherEntityRelationshipName": "sectionId",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "productId"
+    }
+  ],
+  "entityTableName": "products_section",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105601"
+}

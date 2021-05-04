@@ -1,0 +1,47 @@
+{
+  "name": "Treaty",
+  "fields": [
+    {
+      "fieldName": "treatyType",
+      "fieldType": "TreatyType",
+      "fieldValues": "Normal,Multinational,AutoFac"
+    },
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "treatyDocumentPath",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "treatyDetails",
+      "otherEntityRelationshipName": "treatyId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "treaty",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105611"
+}

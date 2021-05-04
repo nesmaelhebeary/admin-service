@@ -1,0 +1,44 @@
+{
+  "name": "ExtensionParameters",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "parameterId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "extensionId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "extensions",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "extensionId"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lkExtensionParameters",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "parameterId"
+    }
+  ],
+  "entityTableName": "extension_parameters",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105608"
+}

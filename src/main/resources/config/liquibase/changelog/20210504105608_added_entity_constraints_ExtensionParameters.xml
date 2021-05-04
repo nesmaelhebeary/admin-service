@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity ExtensionParameters.
+    -->
+    <changeSet id="20210504105608-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="extension_id_id"
+                                 baseTableName="extension_parameters"
+                                 constraintName="fk_extension_parameters__extension_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="extensions"/>
+
+        <addForeignKeyConstraint baseColumnNames="parameter_id_id"
+                                 baseTableName="extension_parameters"
+                                 constraintName="fk_extension_parameters__parameter_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lk_extension_parameters"/>
+    </changeSet>
+</databaseChangeLog>

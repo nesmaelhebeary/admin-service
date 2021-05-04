@@ -1,0 +1,11 @@
+id;product_id;attribute_value;atribute_name;data_type;is_mandatory_for_quotation;is_mandatory_for_policy;attr_type;lookup_type_id
+1;87146;Refined Roads;services Cloned Architect;LOOKUP;false;true;BreakDown;91077
+2;26357;Fresh;invoice Steel;NUMBER;true;false;BreakDown;72601
+3;18414;Cambridgeshire gold synthesizing;vortals Optimization;STRING;true;true;BreakDown;48962
+4;22453;olive;Account;NUMBER;true;false;Informative;59105
+5;58850;users user-facing;time-frame;DATE;false;true;BreakDown;89128
+6;70394;cyan holistic Checking;deposit;NUMBER;false;true;BreakDown;36057
+7;29670;e-tailers Caicos moderator;Representative South International;NUMBER;true;false;Informative;72678
+8;34876;Assistant Coordinator;Bulgaria;NUMBER;true;false;BreakDown;26177
+9;63952;RAM;SMS;LOOKUP;true;false;BreakDown;14346
+10;10005;COM;microchip Hawaii bricks-and-clicks;LOOKUP;true;false;Informative;18783

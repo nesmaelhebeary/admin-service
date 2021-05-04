@@ -1,0 +1,56 @@
+{
+  "name": "SystemClauses",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textAr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clauseType",
+      "fieldType": "ClauseType",
+      "fieldValues": "TermsAndCondition,Clause,Execlusion"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "Active,InActive"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productClause",
+      "otherEntityRelationshipName": "clauseId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "system_clauses",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105624"
+}

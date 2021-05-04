@@ -1,0 +1,42 @@
+{
+  "name": "Deductibles",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sectionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "textAr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textEn",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "productsSection",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "sectionId"
+    }
+  ],
+  "entityTableName": "deductibles",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "adminservice",
+  "clientRootFolder": "adminservice",
+  "databaseType": "sql",
+  "changelogDate": "20210504105605"
+}
