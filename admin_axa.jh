@@ -242,9 +242,7 @@ relationship OneToMany {
   ProductsSection {id} to ProductsSectionIncludeList{sectionId}
 }
 
-relationship OneToMany {
-  ProductsSection {id} to ProductsSectionIncludeList{otherSectionId}
-}
+
 relationship OneToMany {
   LineType {id} to Products{LineTypeId}
 }
